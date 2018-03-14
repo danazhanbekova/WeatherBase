@@ -8,6 +8,10 @@
 			<run>
 				<include name="smoke"></include>
 			</run>
+
 		</groups>
+		<classes>
+			<class name="com.weatherbase.tests.HomePageTesting" />
+		</classes>
 	</test>
 </suite>
