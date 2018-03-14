@@ -15,8 +15,6 @@ public class Driver {
 
 	public static WebDriver getDriver(String browser) {
 		String driverType = browser == null ? Configuration.getProperty("browser") : browser;
-		// if browser has value, use browser
-		// else use the value from the Configuration file
 
 		if (driver == null) {
 			switch (driverType.toLowerCase()) {
