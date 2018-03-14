@@ -9,13 +9,12 @@ import com.weatherbase.utilities.TestBase;
 
 public class HomePageTesting extends TestBase {
 
-	@Test
-	public void test() {
+	@Test(groups = "smoke")
+	public void selectingDailyAvearges() {
 		HomePage homePage = new HomePage(driver);
 		System.out.println(driver.getTitle());
 		assertTrue(homePage.isAt());
-		System.out.println(homePage.setUnits.getText());
-		assertTrue(homePage.setUnits.isEnabled());
+		assertTrue(homePage.setUnits.isDisplayed());// ASK for DIMON
 		homePage.unitedStatesLink.click();
 		homePage.DClink.click();
 		homePage.washingtonLink.click();
@@ -25,6 +24,10 @@ public class HomePageTesting extends TestBase {
 				.contains("Washington, District of Columbia - March 14th - Daily Weather Averages (Weatherbase)"));
 		homePage.march1.click();
 		homePage.listOfTables();
+		assertTrue(homePage.tableDailyWeather.getText().contains("Temperature"));
+
 	}
+	
+	
 
 }
