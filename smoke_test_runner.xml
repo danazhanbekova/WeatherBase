@@ -1,0 +1,13 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="Weatherbase Smoke Tests" verbose="2" thread-count="2">
+	<test name="HomePageTesting">
+		<!-- <classes> <class name="com.weatherbase.tests.HomePageTesting"></class> 
+			</classes> -->
+
+		<groups>
+			<run>
+				<include name="smoke"></include>
+			</run>
+		</groups>
+	</test>
+</suite>

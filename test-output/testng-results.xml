@@ -1,33 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" ignored="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" ignored="0" total="0" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="44040" started-at="2018-03-14T20:13:27Z" finished-at="2018-03-14T20:14:11Z">
+  <suite name="Weatherbase Smoke Tests" duration-ms="8" started-at="2018-03-14T22:27:57Z" finished-at="2018-03-14T22:27:57Z">
     <groups>
-      <group name="smoke">
-        <method signature="HomePageTesting.test()[pri:0, instance:com.weatherbase.tests.HomePageTesting@5c3bd550]" name="test" class="com.weatherbase.tests.HomePageTesting"/>
-      </group> <!-- smoke -->
     </groups>
-    <test name="Default test" duration-ms="44040" started-at="2018-03-14T20:13:27Z" finished-at="2018-03-14T20:14:11Z">
-      <class name="com.weatherbase.tests.HomePageTesting">
-        <test-method status="PASS" signature="setUp(java.lang.String)[pri:0, instance:com.weatherbase.tests.HomePageTesting@5c3bd550]" name="setUp" is-config="true" duration-ms="7616" started-at="2018-03-14T20:13:27Z" finished-at="2018-03-14T20:13:35Z">
-          <params>
-            <param index="0">
-              <value is-null="true"/>
-            </param>
-          </params>
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- setUp -->
-        <test-method status="PASS" signature="test()[pri:0, instance:com.weatherbase.tests.HomePageTesting@5c3bd550]" name="test" duration-ms="36403" started-at="2018-03-14T20:13:35Z" finished-at="2018-03-14T20:14:11Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- test -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.weatherbase.tests.HomePageTesting@5c3bd550]" name="tearDown" is-config="true" duration-ms="0" started-at="2018-03-14T20:14:11Z" finished-at="2018-03-14T20:14:11Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-      </class> <!-- com.weatherbase.tests.HomePageTesting -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+    <test name="HomePageTesting" duration-ms="8" started-at="2018-03-14T22:27:57Z" finished-at="2018-03-14T22:27:57Z">
+    </test> <!-- HomePageTesting -->
+  </suite> <!-- Weatherbase Smoke Tests -->
 </testng-results>

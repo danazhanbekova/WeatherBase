@@ -46,11 +46,23 @@ public class HomePage {
 	@FindBy(xpath = "//div[@id='left1']//table//thead//td[1]")
 	public WebElement tableDailyWeather;
 
-	public void listOfTables() {
-		List<WebElement> tables = driver.findElements(By.xpath("//div[@id='left1']//table//thead//td[1]")); // div[@id='left1']//table//thead//tr
-		for (WebElement list : tables) {
-			System.out.println(list.getText());
-		}
+	@FindBy(xpath = "(//div[@id='left1']//table//thead//tr[@class='bb'])[1]")
+	public WebElement temperature;// *[@id=\"left1\"]/table/thead/tr[2]/td[2]/b
 
+	@FindBy(xpath = "(//div[@id='left1']//table//thead//tr[@class='bb'])[2]")
+	public WebElement dewpoint;
+
+	public void containsFahrengeit() {
+		assertTrue(temperature.getText().contains("°F"));
+		assertTrue(dewpoint.getText().contains("°F"));
 	}
+
+	public void containsCelcius() {
+		assertTrue(temperature.getText().contains("°C"));
+		assertTrue(dewpoint.getText().contains("°C"));
+	}
+
+	@FindBy(xpath = "(//div//table//tr//div//font//a[@class='grayglow'])[2]")
+	public WebElement celciusNearTAble;
+
 }

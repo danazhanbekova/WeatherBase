@@ -15,14 +15,14 @@ public class TestBase {
 	@BeforeClass(alwaysRun = true)
 	public void setUp(@Optional String browser) {
 		driver = Driver.getDriver(browser);
-		driver.manage().timeouts().implicitlyWait(3, TimeUnit.SECONDS);
+		driver.manage().timeouts().implicitlyWait(5, TimeUnit.SECONDS);
 		driver.manage().window().maximize();
 		driver.get(Configuration.getProperty("url"));
 	}
 
 	@AfterClass(alwaysRun = true)
 	public void tearDown() {
-//		Driver.quit();
+		Driver.quit();
 
 	}
 
