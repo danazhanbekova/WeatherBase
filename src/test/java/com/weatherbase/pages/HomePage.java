@@ -1,17 +1,11 @@
 package com.weatherbase.pages;
 
-import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
-import java.util.List;
-
-import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
-
-import com.weatherbase.utilities.Driver;
 
 public class HomePage {
 	private WebDriver driver;
@@ -22,6 +16,7 @@ public class HomePage {
 	}
 
 	public boolean isAt() {
+		System.out.println("Current title is: " + driver.getTitle());
 		return driver.getTitle().equals("Travel Weather Averages (Weatherbase)");
 	}
 
@@ -64,5 +59,31 @@ public class HomePage {
 
 	@FindBy(xpath = "(//div//table//tr//div//font//a[@class='grayglow'])[2]")
 	public WebElement celciusNearTAble;
+
+	public double extractNumberFromString(String targetString) {
+
+		String onlyNum = "";
+		for (int i = 0; i < targetString.length(); i++) {
+
+			char eachChar = targetString.charAt(i);
+
+			if (Character.isDigit(eachChar)) {
+
+				onlyNum += eachChar;
+			}
+		}
+		System.out.println(Double.parseDouble(onlyNum));
+
+		return Double.parseDouble(onlyNum);
+	}
+
+	public double convertFahToCel() {
+		double fah = extractNumberFromString(temperature.getText());
+
+		double result = (fah - 32) * 5 / 9;
+		System.out.println(result);
+		return result;
+
+	}
 
 }

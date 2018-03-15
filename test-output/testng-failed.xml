@@ -7,7 +7,7 @@
         <methods>
           <include name="tearDown"/>
           <include name="setUp"/>
-          <include name="selectingDailyAvearges"/>
+          <include name="calculatingValuesAfterSelecting"/>
         </methods>
       </class> <!-- com.weatherbase.tests.HomePageTesting -->
     </classes>
