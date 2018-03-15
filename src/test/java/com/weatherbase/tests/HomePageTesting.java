@@ -4,7 +4,7 @@ import static org.testng.Assert.assertTrue;
 
 import org.testng.annotations.Test;
 
-import com.weatherbase.page.HomePage;
+import com.weatherbase.pages.HomePage;
 import com.weatherbase.utilities.TestBase;
 
 public class HomePageTesting extends TestBase {
@@ -40,6 +40,19 @@ public class HomePageTesting extends TestBase {
 		homePage.celciusNearTAble.click();
 		System.out.println(homePage.temperature.getText() + "\n" + homePage.dewpoint.getText());
 		homePage.containsCelcius();
+	}
+
+	@Test
+	public void calculatingValuesAfterSelecting() {
+		HomePage homePage=new HomePage(driver);
+		assertTrue(homePage.setUnits.isDisplayed());
+		homePage.unitedStatesLink.click();
+		homePage.DClink.click();
+		homePage.washingtonLink.click();
+		homePage.dailyAveragesLink.click();
+		
+
+
 	}
 
 }

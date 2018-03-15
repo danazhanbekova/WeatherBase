@@ -13,11 +13,10 @@ public class Driver {
 
 	private static WebDriver driver;
 
-	public static WebDriver getDriver(String browser) {
-		String driverType = browser == null ? Configuration.getProperty("browser") : browser;
+	public static WebDriver getDriver() {
 
 		if (driver == null) {
-			switch (driverType.toLowerCase()) {
+			switch (Configuration.getProperty("browser")) {
 
 			case "chrome":
 				WebDriverManager.chromedriver().setup();
