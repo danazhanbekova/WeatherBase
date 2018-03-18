@@ -58,91 +58,88 @@ public class HomePage {
 	}
 
 	@FindBy(xpath = "(//div//table//tr//div//font//a[@class='grayglow'])[2]")
-	public WebElement celciusNearTAble;
+	public WebElement celciusNearTable;
 
-	
-	@FindBy(xpath="//*[@id=\"left-170\"]/ul/li[1]/a")
+	@FindBy(xpath = "//*[@id=\"left-170\"]/ul/li[1]/a")
 	public WebElement Africa;
 
+	@FindBy(xpath = "//*[@id=\"left-170\"]/ul/li[4]/a")
+	public WebElement Asia;
 
-@FindBy(xpath="//*[@id=\"left-170\"]/ul/li[4]/a")
-public WebElement Asia;
+	@FindBy(xpath = "//*[@id=\"left-170\"]/ul/li[5]/a")
+	public WebElement Australia;
+	@FindBy(xpath = "//*[@id=\"left-170\"]/ul/li[6]/a")
+	public WebElement Caribbean;
 
-@FindBy(xpath="//*[@id=\"left-170\"]/ul/li[5]/a")
-public WebElement Australia;
-@FindBy(xpath="//*[@id=\"left-170\"]/ul/li[6]/a")
-public WebElement Caribbean;
+	@FindBy(xpath = "//*[@id=\"left-170\"]/ul/li[7]/a")
+	public WebElement CentralAmerica;
 
-@FindBy(xpath="//*[@id=\"left-170\"]/ul/li[7]/a")
-public WebElement CentralAmerica;
+	@FindBy(xpath = "//*[@id=\"left-170\"]/ul/li[13]/a")
+	public WebElement SouthAmerica;
 
-@FindBy(xpath="//*[@id=\"left-170\"]/ul/li[13]/a")
-public WebElement SouthAmerica;
+	@FindBy(xpath = "//*[@id=\"left-170\"]/ul/li[15]/a")
+	public WebElement ShowAll;
 
-@FindBy(xpath="//*[@id=\"left-170\"]/ul/li[15]/a")
-public WebElement ShowAll;
+	@FindBy(xpath = "//*[@id=\"left-170\"]/ul/li[11]/a")
+	public WebElement NorthAmerica;
 
-@FindBy(xpath="//*[@id=\"left-170\"]/ul/li[11]/a")
-public WebElement NorthAmerica ;
+	@FindBy(xpath = "//*[@id=\"cell300left\"]/ul/li[3]/a")
+	public WebElement Usa;
+	@FindBy(xpath = "//*[@id=\"cell300left\"]/ul/li[10]/a")
+	public WebElement Columbia;
 
-@FindBy(xpath="//*[@id=\"cell300left\"]/ul/li[3]/a")
-		public WebElement Usa;
-@FindBy(xpath="//*[@id=\"cell300left\"]/ul/li[10]/a")
-public WebElement Columbia;
+	@FindBy(xpath = "//*[@id=\"cell300left\"]/ul/li[1]/a")
+	public WebElement Washington2;
 
-@FindBy(xpath="//*[@id=\"cell300left\"]/ul/li[1]/a")
-public WebElement Washington2;
+	@FindBy(id = "headerfront")
+	public WebElement CurrentConditions;
 
-@FindBy(id="headerfront")
-public WebElement CurrentConditions;
+	@FindBy(xpath = "//*[@id=\"condition-table\"]/tbody/tr[1]/td[2]/span[1]")
+	public WebElement Temperature;
 
-@FindBy(xpath="//*[@id=\"condition-table\"]/tbody/tr[1]/td[2]/span[1]")
-public WebElement Temperature;
+	@FindBy(xpath = "//*[@id=\"condition-table\"]/tbody/tr[1]/td[3]/span[1]")
+	public WebElement Humidity;
 
-@FindBy(xpath="//*[@id=\"condition-table\"]/tbody/tr[1]/td[3]/span[1]")
-public WebElement Humidity;
+	@FindBy(xpath = "//*[@id=\"condition-table\"]/tbody/tr[1]/td[4]/span[1]")
+	public WebElement Wind;
 
-@FindBy(xpath="//*[@id=\"condition-table\"]/tbody/tr[1]/td[4]/span[1]")
-public WebElement Wind;
+	@FindBy(xpath = "//*[@id=\"condition-table\"]/tbody/tr[1]/td[5]/span[1]")
+	public WebElement Sunset;
 
-@FindBy(xpath="//*[@id=\"condition-table\"]/tbody/tr[1]/td[5]/span[1]")
-public WebElement Sunset;
+	@FindBy(xpath = "//*[@id=\"condition-sub-table\"]/tbody/tr[2]/td/span/b")
+	public WebElement cloud;
+	@FindBy(xpath = "//*[@id=\"condition-table\"]/tbody/tr[2]/td[1]/span[1]")
+	public WebElement Visibility;
+	@FindBy(xpath = "//*[@id=\"condition-table\"]/tbody/tr[2]/td[2]/span[1]")
+	public WebElement Dew;
+	@FindBy(xpath = "//*[@id=\"condition-table\"]/tbody/tr[2]/td[3]/span[1]")
+	public WebElement Preassure;
+	@FindBy(xpath = "//*[@id=\"condition-table\"]/tbody/tr[2]/td[4]/span[1]")
+	public WebElement LocalTime;
 
-@FindBy(xpath="//*[@id=\"condition-sub-table\"]/tbody/tr[2]/td/span/b")
-public WebElement cloud ;
-@FindBy(xpath="//*[@id=\"condition-table\"]/tbody/tr[2]/td[1]/span[1]")
-public WebElement Visibility;
-@FindBy(xpath="//*[@id=\"condition-table\"]/tbody/tr[2]/td[2]/span[1]")
-public WebElement Dew ;
-@FindBy(xpath="//*[@id=\"condition-table\"]/tbody/tr[2]/td[3]/span[1]")
-public WebElement Preassure  ;
-@FindBy(xpath="//*[@id=\"condition-table\"]/tbody/tr[2]/td[4]/span[1]")
-public WebElement LocalTime;
-public double extractNumberFromString(String targetString) {
+	public double extractNumberFromString(String targetString) {
 
-	String onlyNum = "";
-	for (int i = 0; i < targetString.length(); i++) {
+		String onlyNum = "";
+		for (int i = 0; i < targetString.length(); i++) {
 
-		char eachChar = targetString.charAt(i);
+			char eachChar = targetString.charAt(i);
 
-		if (Character.isDigit(eachChar)) {
+			if (Character.isDigit(eachChar)) {
 
-			onlyNum += eachChar;
+				onlyNum += eachChar;
+			}
 		}
+		System.out.println(Double.parseDouble(onlyNum));
+
+		return Double.parseDouble(onlyNum);
 	}
-	System.out.println(Double.parseDouble(onlyNum));
 
-	return Double.parseDouble(onlyNum);
+	public double convertFahToCel() {
+		double fah = Math.round(extractNumberFromString(temperature.getText()));
+
+		double result = (fah - 32) * 5 / 9;
+		System.out.println(result);
+		return result;
+
+	}
 }
-
-public double convertFahToCel() {
-	double fah = extractNumberFromString(temperature.getText());
-
-	double result = (fah - 32) * 5 / 9;
-	System.out.println(result);
-	return result;
-
-}
-}
-
-
