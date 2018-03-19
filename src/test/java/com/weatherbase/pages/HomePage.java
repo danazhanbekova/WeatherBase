@@ -46,6 +46,40 @@ public class HomePage {
 
 	@FindBy(xpath = "(//div[@id='left1']//table//thead//tr[@class='bb'])[2]")
 	public WebElement dewpoint;
+	
+	@FindBy(xpath="//*[@id='left-170']/ul/li[11]/a")
+	public WebElement northAmerica;
+	
+	@FindBy(xpath="//*[@id='header-block']/table/tbody/tr[2]/td[6]/table/tbody/tr[2]/td/img")
+	public WebElement F;
+	
+	@FindBy(linkText="United States of America")
+	public WebElement unitedStatesOfAmerica;
+	
+	@FindBy(xpath="//*[@id='left-content']/table/tbody/tr[2]/td[1]")
+	public WebElement averageTemperature;
+	
+	@FindBy(xpath="//*[@id='left-content']/table/tbody/tr[3]/td[1]")
+	public WebElement averageHighTemperature;
+	
+	@FindBy(xpath="//*[@id='left-content']/table/tbody/tr[4]/td[1]")
+	public WebElement averageLowTemperature;
+	
+	@FindBy(xpath="//*[@id='left-weather-content']/div/table[2]/tbody/tr[2]/td[1]")
+	public WebElement AverageTemperatureF;
+	
+	@FindBy(xpath="//*[@id='left-weather-content']/div/table[4]/tbody/tr[2]/td[1]")
+	public WebElement AverageHighTemperatureF;
+	
+	@FindBy(xpath="//*[@id='left-weather-content']/div/table[6]/tbody/tr[2]/td[1]")
+	public WebElement AverageLowTemperatureF;
+	
+	@FindBy(xpath="//*[@id='header-block']/table/tbody/tr[2]/td[6]/table/tbody/tr[2]/td/a/img")
+	public WebElement C;
+	
+	@FindBy(xpath="//*[@id='left-weather-content']/div/table[2]/tbody/tr[2]")
+	public WebElement annual;
+	
 
 	public void containsFahrengeit() {
 		assertTrue(temperature.getText().contains("°F"));
