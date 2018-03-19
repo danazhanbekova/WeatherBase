@@ -19,8 +19,7 @@ public class HomePageTesting extends TestBase {
 		homePage.washingtonLink.click();
 		homePage.dailyAveragesLink.click();
 		System.out.println("After clicking to Daily averages current title is: " + driver.getTitle());
-		assertTrue(" Washington, District of Columbia - March 15th - Daily Weather Averages (Weatherbase)"
-				.contains(driver.getTitle()));
+		assertTrue(driver.getTitle().contains("Washington, District of Columbia - March"));
 		homePage.march1.click();
 		assertTrue(homePage.tableDailyWeather.getText().contains("Temperature"));
 
@@ -38,7 +37,7 @@ public class HomePageTesting extends TestBase {
 		homePage.march1.click();
 		System.out.println(homePage.temperature.getText() + "\n" + homePage.dewpoint.getText());
 		homePage.containsFahrengeit();
-		homePage.celciusNearTAble.click();
+		homePage.celciusNearTable.click();
 		System.out.println(homePage.temperature.getText() + "\n" + homePage.dewpoint.getText());
 		homePage.containsCelcius();
 	}
@@ -55,7 +54,7 @@ public class HomePageTesting extends TestBase {
 		homePage.march1.click();
 		System.out.println(homePage.temperature.getText() + "\n" + homePage.dewpoint.getText());
 		homePage.containsFahrengeit();
-		homePage.celciusNearTAble.click();
+		homePage.celciusNearTable.click();
 		System.out.println(homePage.temperature.getText() + "\n" + homePage.dewpoint.getText());
 		homePage.containsCelcius();
 
