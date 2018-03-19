@@ -12,7 +12,7 @@ public class HomePage456 extends TestBase {
 	// test case 4
 	@Test(priority = 3)
 	public void verifytitlematch() throws InterruptedException {
-		HomePage homePage = new HomePage(driver);
+		HomePage homePage = new HomePage();
 		driver.getTitle();
 		assertTrue(homePage.isAt());
 		System.out.println("the title is displayed" + driver.getTitle());

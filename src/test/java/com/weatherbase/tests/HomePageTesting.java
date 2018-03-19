@@ -11,11 +11,11 @@ public class HomePageTesting extends TestBase {
 
 	@Test(priority = 0, groups = "smoke")
 	public void selectingDailyAvearges() {
-		HomePage homePage = new HomePage(driver);
+		HomePage homePage = new HomePage();
 		assertTrue(homePage.isAt());
 		assertTrue(homePage.setUnits.isDisplayed());// ASK for DIMON
 		homePage.unitedStatesLink.click();
-		homePage.DClink.click();
+		homePage.dcLink.click();
 		homePage.washingtonLink.click();
 		homePage.dailyAveragesLink.click();
 		System.out.println("After clicking to Daily averages current title is: " + driver.getTitle());
@@ -27,10 +27,10 @@ public class HomePageTesting extends TestBase {
 
 	@Test(priority = 1)
 	public void afterSelectingDailyAverage() throws InterruptedException {
-		HomePage homePage = new HomePage(driver);
+		HomePage homePage = new HomePage();
 		assertTrue(homePage.setUnits.isDisplayed());
 		homePage.unitedStatesLink.click();
-		homePage.DClink.click();
+		homePage.dcLink.click();
 		homePage.washingtonLink.click();
 		homePage.dailyAveragesLink.click();
 		Thread.sleep(3000);
@@ -44,10 +44,10 @@ public class HomePageTesting extends TestBase {
 
 	@Test(priority = 2)
 	public void calculatingValuesAfterSelecting() throws InterruptedException {
-		HomePage homePage = new HomePage(driver);
+		HomePage homePage = new HomePage();
 		assertTrue(homePage.setUnits.isDisplayed());
 		homePage.unitedStatesLink.click();
-		homePage.DClink.click();
+		homePage.dcLink.click();
 		homePage.washingtonLink.click();
 		homePage.dailyAveragesLink.click();
 		Thread.sleep(3000);

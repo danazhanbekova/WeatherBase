@@ -12,7 +12,7 @@ public class HomePageTesting789 extends TestBase{
 
 	@Test (priority = 0)
 	public void test1(){
-		HomePage homepage = new HomePage(driver);
+		HomePage homepage = new HomePage();
 		System.out.println(driver.getTitle());
 		assertTrue(homepage.isAt());
 		homepage.northAmerica.click();
@@ -20,7 +20,7 @@ public class HomePageTesting789 extends TestBase{
 		assertEquals("http://www.weatherbase.com/weather/country.php3?r=NOR&regionname=North-America", driver.getCurrentUrl());
 		homepage.unitedStatesOfAmerica.click();
 		assertEquals("United States of America Travel Weather Averages (Weatherbase)", driver.getTitle());
-		homepage.DClink.click();
+		homepage.dcLink.click();
 		assertEquals("District of Columbia, United States of America Travel Weather Averages (Weatherbase)", driver.getTitle());
 		assertEquals(homepage.averageTemperature.getText(), "Average Temperature (F)");
 		assertEquals(homepage.averageHighTemperature.getText(), "Average High Temperature (F)");
@@ -34,7 +34,7 @@ public class HomePageTesting789 extends TestBase{
 	
 	@Test (priority = 1)
 	public void test2(){
-		HomePage homepage = new HomePage(driver);
+		HomePage homepage = new HomePage();
 		System.out.println(driver.getTitle());
 		assertTrue(homepage.F.isDisplayed());
 		homepage.northAmerica.click();
@@ -42,7 +42,7 @@ public class HomePageTesting789 extends TestBase{
 		assertEquals("http://www.weatherbase.com/weather/country.php3?r=NOR&regionname=North-America", driver.getCurrentUrl());
 		homepage.unitedStatesOfAmerica.click();
 		assertEquals("United States of America Travel Weather Averages (Weatherbase)", driver.getTitle());
-		homepage.DClink.click();
+		homepage.dcLink.click();
 		assertEquals("District of Columbia, United States of America Travel Weather Averages (Weatherbase)", driver.getTitle());
 		assertEquals(homepage.averageTemperature.getText(), "Average Temperature (F)");
 		assertEquals(homepage.averageHighTemperature.getText(), "Average High Temperature (F)");
@@ -61,7 +61,7 @@ public class HomePageTesting789 extends TestBase{
 	
 	@Test (priority = 2 )
 	public void test3(){
-		HomePage homepage = new HomePage(driver);
+		HomePage homepage = new HomePage();
 		System.out.println(driver.getTitle());
 		homepage.F.isDisplayed();
 		homepage.northAmerica.click();
@@ -69,7 +69,7 @@ public class HomePageTesting789 extends TestBase{
 		assertEquals("http://www.weatherbase.com/weather/country.php3?r=NOR&regionname=North-America", driver.getCurrentUrl());
 		homepage.unitedStatesOfAmerica.click();
 		assertEquals("United States of America Travel Weather Averages (Weatherbase)", driver.getTitle());
-		homepage.DClink.click();
+		homepage.dcLink.click();
 		assertEquals("District of Columbia, United States of America Travel Weather Averages (Weatherbase)", driver.getTitle());
 		homepage.washingtonLink.click(); 
 		assertEquals("Washington, District of Columbia Travel Weather Averages (Weatherbase)",driver.getTitle());
