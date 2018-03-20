@@ -151,7 +151,73 @@ public class HomePage {
 	public WebElement Preassure;
 	@FindBy(xpath = "//*[@id=\"condition-table\"]/tbody/tr[2]/td[4]/span[1]")
 	public WebElement LocalTime;
+	@FindBy(xpath="//*[@id=\"header-block\"]/table/tbody/tr[2]/td[6]/table/tbody/tr[2]/td/img")
+	public WebElement Farenheit;
+	@FindBy(xpath="//*[@id=\"header-browse-features\"]/a[1]")
+	public WebElement Browser;
+	@FindBy(xpath="//*[@id=\"header-nav\"]/a[1]")
+	public WebElement Af;
+	@FindBy(xpath="//*[@id=\"header-nav\"]/a[2]")
+	public WebElement As;
+	@FindBy(xpath="//*[@id=\"header-nav\"]/a[3]")
+	public WebElement Au;
+	@FindBy(xpath="//*[@id=\"header-nav\"]/a[4]")
+	public WebElement Car;
+	@FindBy(xpath="//*[@id=\"header-nav\"]/a[5]")
+	public WebElement CA;
+	@FindBy(xpath="//*[@id=\"header-nav\"]/a[6]")
+	public WebElement Eu;
+	@FindBy(xpath="//*[@id=\"header-nav\"]/a[7]")
+	public WebElement ME;
+	@FindBy(xpath="//*[@id=\"header-nav\"]/a[8]")
+	public WebElement NA;
+	@FindBy(xpath="//*[@id=\"header-nav\"]/a[9]")
+	public WebElement Sa;
+	@FindBy(xpath="//*[@id=\"header-nav\"]/a[10]")
+	public WebElement Showa;
+	@FindBy(css="<div id=\"subheaderfont\" style=\"color:#ffffff; text-shadow:none;\">FEATURES</div>")
+	public WebElement Features;
+	@FindBy(xpath="//*[@id=\"footer\"]/center/table/tbody/tr[1]/td[2]/ul/li[1]/a")
+	public WebElement CompareCities;
+	@FindBy(xpath="//*[@id=\"footer\"]/center/table/tbody/tr[1]/td[2]/ul/li[2]/a")
+	public WebElement VacationF;
+	@FindBy(xpath="//*[@id=\"footer\"]/center/table/tbody/tr[1]/td[2]/ul/li[3]/a")
+	public WebElement WeatherR;
+	@FindBy(xpath="//*[@id=\"footer\"]/center/table/tbody/tr[1]/td[2]/ul/li[4]/a")
+	public WebElement WeatherGlo;
+	@FindBy(xpath="//*[@id=\"footer\"]/center/table/tbody/tr[1]/td[2]/ul/li[5]/a")
+	public WebElement ClimateCal;
+	
 
+	@FindBy(css="<div id=\"subsubheaderfont\">CONVERT TEMPERATURE&nbsp;</div>")
+	public WebElement convertT;
+	@FindBy(css="<div id=\"subsubheaderfont\">COMPUTE WIND CHILL&nbsp;</div>")
+	public WebElement computeWind;
+	@FindBy(css="<div id=\"subsubheaderfont\">COMPUTE HEAT INDEX&nbsp;</div>")
+	public WebElement CompH;
+	@FindBy(css="<div id=\"subsubheaderfont\">CONVERT WIND SPEED&nbsp;</div>")
+	public WebElement convertWind;
+	@FindBy(css="<div id=\"subsubheaderfont\">COMPUTE RELATIVE HUMIDITY&nbsp;</div>")
+	public WebElement reHumidity;
+	@FindBy(css="<div id=\"subsubheaderfont\">CONVERT PRESSURE&nbsp;</div>")
+	public WebElement ConPressure ;
+	@FindBy(css="<div id=\"subsubheaderfont\">CONVERT PRECIPITATION&nbsp;</div>")
+	public WebElement Precip ;
+	
+
+	
+	
+	
+	
+	public void containsFarenheit() {
+		
+    assertTrue(Farenheit.isDisplayed());
+	assertTrue(Farenheit.getText().contains("F"));
+	assertTrue(Farenheit.isSelected());
+	
+	
+	}
+	
 	public double extractNumberFromString(String targetString) {
 
 		String onlyNum = "";
@@ -177,4 +243,7 @@ public class HomePage {
 		return result;
 
 	}
-}
+
+	
+	}
+
