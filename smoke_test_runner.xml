@@ -1,6 +1,6 @@
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
 <suite name="Weatherbase Smoke Tests" verbose="2" thread-count="2">
-	<test name="HomePageTesting">
+	<test name="SmokeTest">
 		<!-- <classes> <class name="com.weatherbase.tests.HomePageTesting"></class> 
 			</classes> -->
 
@@ -11,7 +11,7 @@
 
 		</groups>
 		<classes>
-			<class name="com.weatherbase.tests.HomePageTesting" />
+			<class name="com.weatherbase.tests.SmokeTest" />
 		</classes>
 	</test>
 </suite>
