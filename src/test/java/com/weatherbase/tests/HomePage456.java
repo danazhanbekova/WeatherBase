@@ -79,7 +79,7 @@ public class HomePage456 extends TestBase {
 		assertTrue(homePage.LocalTime.isDisplayed());
 		Thread.sleep(5000);
 	}
-	//case 5
+	// case 5
 
 	@Test(priority = 3)
 	public void itsInFarenheit() throws InterruptedException {
@@ -100,8 +100,9 @@ public class HomePage456 extends TestBase {
 		Thread.sleep(3000);
 
 	}
-	//case6
-	@Test(priority=3)
+
+	// case6
+	@Test(priority = 3)
 	public void featuresIsDisplayed() throws InterruptedException {
 		HomePage homePage = new HomePage();
 		assertTrue(homePage.isAt());
@@ -113,10 +114,8 @@ public class HomePage456 extends TestBase {
 		assertTrue(homePage.WeatherGlo.isDisplayed());
 		assertTrue(homePage.ClimateCal.isDisplayed());
 		homePage.ClimateCal.click();
-		assertTrue(("Weatherbase Weather Reference and Calculators")
-				.contains(driver.getTitle()));
-		assertTrue(("http://www.weatherbase.com/reference.php3")
-				.contains(driver.getCurrentUrl()));
+		assertTrue(("Weatherbase Weather Reference and Calculators").contains(driver.getTitle()));
+		assertTrue(("http://www.weatherbase.com/reference.php3").contains(driver.getCurrentUrl()));
 		assertTrue(homePage.convertT.isDisplayed());
 		assertTrue(homePage.computeWind.isDisplayed());
 		assertTrue(homePage.CompH.isDisplayed());
@@ -124,8 +123,7 @@ public class HomePage456 extends TestBase {
 		assertTrue(homePage.reHumidity.isDisplayed());
 		assertTrue(homePage.ConPressure.isDisplayed());
 		assertTrue(homePage.Precip.isDisplayed());
-		
-	
+
 		
 	}
 }
