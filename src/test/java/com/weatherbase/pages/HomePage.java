@@ -1,5 +1,10 @@
 package com.weatherbase.pages;
 
+/*
+ * @Author:Crazy Hackers
+ * Please guys when adding elements try to give name with small letter:
+ * ex: public WebElement clickButton; ( NOT public WebElement ClickButton) :=)
+ */
 import static org.testng.Assert.assertTrue;
 
 import org.openqa.selenium.WebDriver;
