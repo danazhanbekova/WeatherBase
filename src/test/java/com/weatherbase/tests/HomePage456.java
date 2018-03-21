@@ -63,6 +63,7 @@ public class HomePage456 extends TestBase {
 				.contains(driver.getTitle()));
 		assertTrue(homePage.Washington2.isDisplayed());
 		homePage.Washington2.click();
+		Thread.sleep(5000);
 
 		assertTrue(
 				("Washington, District of Columbia Travel Weather Averages (Weatherbase)").contains(driver.getTitle()));
@@ -76,6 +77,53 @@ public class HomePage456 extends TestBase {
 		assertTrue(homePage.Dew.isDisplayed());
 		assertTrue(homePage.Preassure.isDisplayed());
 		assertTrue(homePage.LocalTime.isDisplayed());
+		Thread.sleep(5000);
+	}
+	// case 5
 
+	@Test(priority = 3)
+	public void itsInFarenheit() throws InterruptedException {
+		HomePage homePage = new HomePage();
+		assertTrue(homePage.isAt());
+		assertTrue(homePage.Browser.isDisplayed());
+		homePage.Browser.click();
+		assertTrue(homePage.Af.isDisplayed());
+		assertTrue(homePage.As.isDisplayed());
+		assertTrue(homePage.Au.isDisplayed());
+		assertTrue(homePage.Car.isDisplayed());
+		assertTrue(homePage.CA.isDisplayed());
+		assertTrue(homePage.Eu.isDisplayed());
+		assertTrue(homePage.ME.isDisplayed());
+		assertTrue(homePage.NA.isDisplayed());
+		assertTrue(homePage.Sa.isDisplayed());
+		assertTrue(homePage.Showa.isDisplayed());
+		Thread.sleep(3000);
+
+	}
+
+	// case6
+	@Test(priority = 3)
+	public void featuresIsDisplayed() throws InterruptedException {
+		HomePage homePage = new HomePage();
+		assertTrue(homePage.isAt());
+		assertTrue(homePage.Features.isDisplayed());
+		homePage.Features.click();
+		assertTrue(homePage.CompareCities.isDisplayed());
+		assertTrue(homePage.VacationF.isDisplayed());
+		assertTrue(homePage.WeatherR.isDisplayed());
+		assertTrue(homePage.WeatherGlo.isDisplayed());
+		assertTrue(homePage.ClimateCal.isDisplayed());
+		homePage.ClimateCal.click();
+		assertTrue(("Weatherbase Weather Reference and Calculators").contains(driver.getTitle()));
+		assertTrue(("http://www.weatherbase.com/reference.php3").contains(driver.getCurrentUrl()));
+		assertTrue(homePage.convertT.isDisplayed());
+		assertTrue(homePage.computeWind.isDisplayed());
+		assertTrue(homePage.CompH.isDisplayed());
+		assertTrue(homePage.convertWind.isDisplayed());
+		assertTrue(homePage.reHumidity.isDisplayed());
+		assertTrue(homePage.ConPressure.isDisplayed());
+		assertTrue(homePage.Precip.isDisplayed());
+
+		
 	}
 }
