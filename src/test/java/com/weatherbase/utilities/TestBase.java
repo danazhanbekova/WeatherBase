@@ -22,9 +22,9 @@ public class TestBase {
 		driver.get(Configuration.getProperty("url"));
 	}
 
-	@AfterMethod(alwaysRun = true)
+	//@AfterMethod(alwaysRun = true)
 	public void tearDown() {
-		Driver.quit();
+		Driver.quit();;
 
 	}
 
