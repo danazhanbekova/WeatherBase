@@ -7,6 +7,8 @@ package com.weatherbase.pages;
  */
 import static org.testng.Assert.assertTrue;
 
+import java.util.List;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
@@ -156,6 +158,81 @@ public class HomePage {
 	public WebElement Preassure;
 	@FindBy(xpath = "//*[@id=\"condition-table\"]/tbody/tr[2]/td[4]/span[1]")
 	public WebElement LocalTime;
+	
+	@FindBy ( xpath = "(//img[@align='right'])[1]")
+	public WebElement blueImgAvgTemp;
+	@FindBy ( xpath = "//iframe[@class='fancybox-iframe']")
+	public WebElement iframe;
+	@FindBy ( xpath = "//*[@text-anchor='middle'][@class='highcharts-title']")
+	public WebElement iframeAvgTemp;
+	@FindBy ( xpath = "//*[@text-anchor='middle'][@class='highcharts-subtitle']")
+	public WebElement iframeWashingtonDC;
+	@FindBy ( xpath = "//*[@text-anchor='middle'][@class=' highcharts-yaxis-title']")
+	public WebElement iframeFahrenheit;
+	@FindBy ( xpath = "//a[@href='/weather/weatherall.php3?s=50427&units=']")
+	public WebElement showAllData;
+	@FindBy( xpath = "(//div[@id='headerfont'])[5]")
+	public WebElement weatherAvgSummary;
+	@FindBy ( xpath = "//a[.='Show Summary']")
+	public WebElement showSummary;
+	@FindBy ( xpath = "//div[.='SHARE']")
+	public WebElement SHARE;
+	@FindBy ( xpath = "//div[.='PRINT THIS DATA']")
+	public WebElement printThisData;
+	@FindBy ( xpath = "//a[@id='print-icon']")
+	public WebElement printThisDataButton;
+	@FindBy ( xpath = "//embed[@id='plugin']")
+	public WebElement printPage;
+	@FindBy ( xpath = "//button[.='Print']")
+	public WebElement printButton;
+	@FindBy ( xpath = "//input[@class='page-settings-all-radio']")
+	public WebElement aLLRadioButton;
+	@FindBy ( xpath = "(//a[@style='color:#bbbbbb;'])[2]")
+	public WebElement features;
+	@FindBy( xpath = "(//*[@id=\"header-nav\"])[2] //a")
+	public List<WebElement> elements;
+	@FindBy ( xpath = "(//*[@id=\"header-nav\"])[2] //a[5]")
+	public WebElement climateCalculators;
+	@FindBy ( xpath = "//div[@id='subsubheaderfont']")
+	public List<WebElement> weatherCalculatorsHeaders;
+	@FindBy ( xpath = "//input[@name='mph']")
+	public WebElement mphInput;
+	@FindBy ( xpath = "//input[@name='kmh']")
+	public WebElement kmhInput;
+	@FindBy ( xpath = "//input[@name='knots']")
+	public WebElement knotsInput;
+	@FindBy ( xpath = "//input[@name='meters']")
+	public WebElement metersInput;
+	@FindBy ( xpath = "(//input[@type='image']) [7]")
+	public WebElement computeButton;
+	
+	public boolean convertWindSpeedCheck() {
+		int kmh = Integer.parseInt(kmhInput.getAttribute("value"));
+		int knots = Integer.parseInt(knotsInput.getAttribute("value"));
+		int meters = Integer.parseInt(metersInput.getAttribute("value"));
+		if(kmh==23 && knots==12 && meters==6 ) {
+			return true;
+		}
+		return false;
+	}
+	
+	public boolean checkWeatherElements() {
+		if(weatherCalculatorsHeaders.size()==7) {
+			return true;
+			}
+			return false;
+	}
+	
+	public boolean checkElements() {
+		if(elements.size()==6) {
+		return true;
+		}
+		return false;
+	}
+	
+	public void changeFrame() {
+		driver.switchTo().frame(iframe);
+	}
 	@FindBy(xpath = "//*[@id=\"header-block\"]/table/tbody/tr[2]/td[6]/table/tbody/tr[2]/td/img")
 	public WebElement Farenheit;
 	@FindBy(xpath = "//*[@id=\"header-browse-features\"]/a[1]")
@@ -214,6 +291,7 @@ public class HomePage {
 		assertTrue(Farenheit.getText().contains("F"));
 		assertTrue(Farenheit.isSelected());
 
+
 	}
 
 	public double extractNumberFromString(String targetString) {
@@ -241,5 +319,4 @@ public class HomePage {
 		return result;
 
 	}
-
 }
