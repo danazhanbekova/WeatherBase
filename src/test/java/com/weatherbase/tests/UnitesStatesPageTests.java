@@ -22,7 +22,7 @@ public class UnitesStatesPageTests extends TestBase{
 	@Test
 	public void verifyConvertPressureCalculator() {
 		HomePage homepage = new HomePage();
-		homepage.features.click();
+		homepage.featuresJames.click();
 		assertTrue(homepage.headerCompareCities.isDisplayed());
 		assertTrue(homepage.headerVacationFinder.isDisplayed());
 		assertTrue(homepage.headerWeatherReference.isDisplayed());
@@ -64,7 +64,7 @@ public class UnitesStatesPageTests extends TestBase{
 	@Test
 	public void verifyComputeWindChillCalculator() {
 		HomePage homepage = new HomePage();
-		homepage.features.click();
+		homepage.featuresJames.click();
 		assertTrue(homepage.headerCompareCities.isDisplayed());
 		assertTrue(homepage.headerVacationFinder.isDisplayed());
 		assertTrue(homepage.headerWeatherReference.isDisplayed());
@@ -88,6 +88,10 @@ public class UnitesStatesPageTests extends TestBase{
 		assertTrue(cpage.convertRelativeHumidity.isDisplayed());
 		assertTrue(cpage.convertPressure.isDisplayed());
 		assertTrue(cpage.convertPrecipitation.isDisplayed());
+		
+		cpage.radioButtonFahrenheit.click();
+		assertTrue(cpage.radioButtonFahrenheit.isSelected());
+		
 		
 	}
 

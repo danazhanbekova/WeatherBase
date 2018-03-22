@@ -300,7 +300,7 @@ public class HomePage {
 
 	
 	@FindBy(xpath="//div[@id='header-browse-features']/a[2]")
-	public WebElement features;
+	public WebElement featuresJames;
 	public void containsFarenheit() {
 
 		assertTrue(Farenheit.isDisplayed());
