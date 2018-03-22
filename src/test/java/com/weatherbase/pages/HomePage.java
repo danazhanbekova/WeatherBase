@@ -207,7 +207,23 @@ public class HomePage {
 	public WebElement ConPressure;
 	@FindBy(css = "<div id=\"subsubheaderfont\">CONVERT PRECIPITATION&nbsp;</div>")
 	public WebElement Precip;
+	
+	@FindBy(xpath="(//div[@id='featurestoggle']//a[@class='headerglow'])[1]")
+	public WebElement headerCompareCities;
+	@FindBy(xpath="(//div[@id='featurestoggle']//a[@class='headerglow'])[2]")
+	public WebElement headerVacationFinder;
+	@FindBy(xpath="(//div[@id='featurestoggle']//a[@class='headerglow'])[3]")
+	public WebElement headerWeatherReference;
+	@FindBy(xpath="(//div[@id='featurestoggle']//a[@class='headerglow'])[4]")
+	public WebElement headerWeatherGlossary;
+	@FindBy(xpath="(//div[@id='featurestoggle']//a[@class='headerglow'])[5]")
+	public WebElement headerClimateCalculators;
+	@FindBy(xpath="(//div[@id='featurestoggle']//a[@class='headerglow'])[6]")
+	public WebElement headerWeatherImpactAssessments;
 
+	
+	@FindBy(xpath="//div[@id='header-browse-features']/a[2]")
+	public WebElement features;
 	public void containsFarenheit() {
 
 		assertTrue(Farenheit.isDisplayed());
