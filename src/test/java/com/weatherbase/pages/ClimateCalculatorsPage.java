@@ -47,4 +47,29 @@ public class ClimateCalculatorsPage {
 	public WebElement radioButtonFahrenheit;
 	@FindBy(xpath="(//input[@value='mph'])[1]")
 	public WebElement radioButtonmph;
+	@FindBy(xpath="(//*[@name='convert'])[1]")
+	public WebElement radioButtonConvertTemp;
+	
+	@FindBy(xpath="//input[@name='Temp']")
+	public WebElement tempWindChillField;
+	@FindBy(xpath="//input[@name='Wind']")
+	public WebElement windSpeedField;
+	@FindBy(xpath="(//*[@name='windchill']//input[@type='image'])[1]")
+	public WebElement computeButtonWindChill;
+	
+	
+	@FindBy(xpath="//input[@name='Temp']")
+	public WebElement tempField;
+	@FindBy(xpath="//input[@name='Dewp']")
+	public WebElement dewPointField;
+	
+	@FindBy(xpath="//input[@name='fahrenheit']")
+	public WebElement convertTempField;
+	@FindBy(xpath="(//input[@src='/gr/compute-button-hover.png'])[1]")
+	public WebElement computeButtonConvertPressure;
+	
+	@FindBy(xpath="(//*[@name='humidity']//input[@type='image'])[1]")
+	public WebElement computeButtonRelativeHumidity;
+	@FindBy(xpath="//input[@name='Relh']")
+	public WebElement relativeHumidyField;
 }
