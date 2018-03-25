@@ -66,8 +66,8 @@ public class TestCase1_2_3 extends TestBase {
 		homePage.extractNumberFromString(homePage.temperature.getText());
 		homePage.extractNumberFromString(homePage.dewpoint.getText());
 
-		homePage.convertFahToCel();
+		homePage.convertFahToCel(homePage.temperature);
 
 	}
 
-	}
+}

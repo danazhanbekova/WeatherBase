@@ -327,12 +327,31 @@ public class HomePage {
 		return Double.parseDouble(onlyNum);
 	}
 
-	public double convertFahToCel() {
-		double fah = Math.round(extractNumberFromString(temperature.getText()));
+	public double convertFahToCel(WebElement element) {
+		double fah = Math.round(extractNumberFromString(element.getText()));
 
 		double result = (fah - 32) * 5 / 9;
 		System.out.println(result);
 		return result;
 
 	}
+	
+	@FindBy(xpath="//*[@id=\"left-weather-content\"]/div/table[2]/tbody/tr[2]/td[1]")
+	public WebElement cNearTable;
+	
+	@FindBy(xpath="//*[@id=\"left-weather-content\"]/div/table[2]/tbody/tr[2]")
+	public WebElement allNumerics;
+	
+	@FindBy(xpath="//*[@id='left-weather-content']/div/table[2]/tbody/tr[1]")
+	public WebElement annual1;
+	
+	@FindBy(xpath="//*[@id='left-weather-content']/div/table[4]/tbody/tr[1]")
+	public WebElement annual2;
+	
+	@FindBy(xpath="//*[@id='left-weather-content']/div/table[6]/tbody/tr[1]")
+	public WebElement annual3;
+	
+	@FindBy(xpath="//*[@id='left-weather-content']/div/table[8]/tbody/tr[1]")
+	public WebElement annual4;
+	
 }
