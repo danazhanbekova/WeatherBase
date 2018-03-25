@@ -3,22 +3,15 @@ package com.weatherbase.tests;
 import static org.testng.Assert.assertEquals;
 import static org.testng.Assert.assertTrue;
 
-import java.util.*;
-
-import org.openqa.selenium.*;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 
 import com.weatherbase.pages.ClimateCalculatorsPage;
-import com.weatherbase.pages.DistrictOfColumbiaPage;
 import com.weatherbase.pages.HomePage;
-import com.weatherbase.pages.UnitedStatesPage;
-import com.weatherbase.pages.WashingtonPage;
 import com.weatherbase.utilities.TestBase;
 
-public class UnitesStatesPageTests extends TestBase {
+public class TestCase17_18_19_20 extends TestBase {
 	@Test
 	public void verifyConvertPressureCalculator() {
 		HomePage homepage = new HomePage();
@@ -162,15 +155,15 @@ public class UnitesStatesPageTests extends TestBase {
 		assertTrue(cpage.convertRelativeHumidity.isDisplayed());
 		assertTrue(cpage.convertPressure.isDisplayed());
 		assertTrue(cpage.convertPrecipitation.isDisplayed());
-		
+
 		cpage.radioButtonConvertTemp.click();
 		assertTrue(cpage.radioButtonConvertTemp.isSelected());
-		
+
 		cpage.tempField.sendKeys("75");
 		cpage.dewPointField.sendKeys("30");
 		cpage.computeButtonRelativeHumidity.click();
-		assertEquals(cpage.relativeHumidyField.getText(),"19");
-		
+		assertEquals(cpage.relativeHumidyField.getText(), "19");
+
 	}
 
 }

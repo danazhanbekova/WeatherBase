@@ -15,7 +15,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.Test;
 import com.weatherbase.pages.HomePage;
 
-public class HomePage13141516 extends TestBase {
+public class TestCase13_14_15_16 extends TestBase {
 
 	private String expectedTitle = "United States of America Travel Weather Averages (Weatherbase)";
 	private String DCTitle = "District of Columbia, United States of America Travel Weather Averages (Weatherbase)";

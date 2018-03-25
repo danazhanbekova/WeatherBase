@@ -9,7 +9,7 @@ import org.testng.annotations.Test;
 import com.weatherbase.pages.HomePage;
 import com.weatherbase.utilities.TestBase;
 
-public class HomePageTesting101112 extends TestBase{
+public class TestCase10_11_12 extends TestBase{
 
 	
 	@Test

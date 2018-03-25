@@ -8,7 +8,7 @@ import org.testng.annotations.Test;
 import com.weatherbase.pages.HomePage;
 import com.weatherbase.utilities.TestBase;
 
-public class HomePageTesting789 extends TestBase{
+public class TestCase7_8_9 extends TestBase{
 
 	@Test (priority = 0)
 	public void test1(){
